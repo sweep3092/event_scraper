@@ -67,7 +67,7 @@ func parseDateAnd3DaysBefore(rawdate string) (string, string) {
 	day, _ := strconv.Atoi(monthday[1])
 	now := time.Now()
 	startdate := time.Date(now.Year(), time.Month(month), day, 0, 0, 0, 0, time.UTC)
-	enddate := startdate.AddDate(0, 0, -3)
+	enddate := startdate.AddDate(0, 0, -1)
 
 	return startdate.Format("2006-01-02"), enddate.Format("2006-01-02")
 }
